@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-680.75" y="179.0">AnimalTest</node>
+    <node x="-188.75" y="179.0">ZooTest</node>
+    <node x="-424.75" y="-301.0">Animal</node>
+    <node x="-105.5" y="-301.0">Zoo</node>
+    <node x="-765.0" y="-301.0">Dog</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="AnimalTest" target="Animal" relationship="CREATE">
+      <point x="74.5" y="0.0" />
+      <point x="-217.0" y="217.5" />
+      <point x="-217.0" y="-177.5" />
+      <point x="89.0" y="-15.0" />
+    </edge>
+    <edge source="ZooTest" target="Animal" relationship="CREATE">
+      <point x="-74.5" y="0.0" />
+      <point x="-217.0" y="217.5" />
+      <point x="-217.0" y="-177.5" />
+      <point x="89.0" y="-15.0" />
+    </edge>
+    <edge source="Zoo" target="Animal" relationship="DEPENDENCY">
+      <point x="-109.0" y="-22.0" />
+      <point x="89.0" y="0.0" />
+    </edge>
+    <edge source="ZooTest" target="Zoo" relationship="CREATE">
+      <point x="16.25" y="-38.5" />
+      <point x="-101.5" y="160.5" />
+    </edge>
+    <edge source="ZooTest" target="Dog" relationship="CREATE">
+      <point x="0.0" y="-38.5" />
+      <point x="-114.25" y="100.0" />
+      <point x="-665.5" y="100.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+    <edge source="Dog" target="Animal" relationship="GENERALIZATION">
+      <point x="99.5" y="44.0" />
+      <point x="-89.0" y="0.0" />
+    </edge>
+    <edge source="AnimalTest" target="Dog" relationship="CREATE">
+      <point x="0.0" y="-38.5" />
+      <point x="-606.25" y="100.0" />
+      <point x="-665.5" y="100.0" />
+      <point x="0.0" y="94.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="true" x="-45.0" y="119.5" />
+  <SelectedNodes>
+    <node>AnimalTest</node>
+    <node>ZooTest</node>
+    <node>Animal</node>
+    <node>Zoo</node>
+    <node>Dog</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
