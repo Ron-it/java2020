@@ -4,17 +4,18 @@
  * this is done at pseudocode level, but
  * it's good for testing and practice
  * 
+ * Wrapper classes: Integer, Character, Double, etc.
  */
 
 
 public class Element
 {
-	private String data; // can also be a number, object, array, etc.
-	private Element next;
+	private Object data; // can also be a number, String, array, etc.
+	private Element next;// for numbers use the wrapper classes
 	
 	public Element() { }
 	
-	public Element(String data)
+	public Element(Object data)
 	{	this.data = data;
 		this.next = null;
 	}
@@ -27,7 +28,7 @@ public class Element
 	{	return this.next;
 	}
 	
-	public String getData()
+	public Object getData()
 	{	return this.data;
 	}
 	
@@ -35,12 +36,12 @@ public class Element
 	{	this.next = e;
 	}
 	
-	public void setData(String data)
+	public void setData(Object data)
 	{	this.data = data;
 	}
 	
 	public String toString()
-	{	return this.data;
+	{	return this.data.toString();
 	}
 	
 }

@@ -14,6 +14,7 @@ public class Collection
 {
 	Element start;
 	Element current;
+	// an Element end; could be added to keep track of the last item
 	
 	public Collection()
 	{	this.start = null;
@@ -28,7 +29,7 @@ public class Collection
 	{	return current != null;
 	}
 
-	public void addItem(String data)
+	public void add(Object data)
 	// can also be a number, object, array, etc. instead of String
 	{
 		Element newElement = new Element(data);
@@ -41,11 +42,16 @@ public class Collection
 		}
 	}
 	
-	public String getNext()
+	public Object getNext()
 	{
-		String data = current.getData();
+		Object data = current.getData();
 		current = current.getNext();
 		return data;
+	}
+	
+	public Object getData()
+	{
+		return this.getNext();
 	}
 	
 	public void resetNext()
@@ -56,7 +62,7 @@ public class Collection
 	{	String output = "[ ";
 		resetNext();
 		while( this.current != null )
-		{	String e = this.getNext();
+		{	String e = this.getNext().toString();
 			output = output + e + "  ";
 		}
 		return output + "]";
@@ -65,7 +71,7 @@ public class Collection
 	public void print()
 	{	this.resetNext();
 		while( this.current.hasNext() )
-		{	System.out.println(this.getNext());
+		{	System.out.println(this.getNext().toString());
 		}
 	}
 }
