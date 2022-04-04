@@ -1,0 +1,7 @@
+The folder
+	LastTestPrep
+is an IntelliJ IDEA project.
+If you are not using IntelliJ, get the source code directly from the folder
+	OOP\OOP-G12-Q4\LastTestPrep\src
+UML class diagram included:
+	LastTestPrepUML.png
