@@ -5,7 +5,7 @@ public class CollectionDemo
 	
 	public static void main (String[] args)
 	{
-		Collection list = new Collection();
+		Collection <String> list = new Collection();
 		list.add("Joe");
 		list.add("Adam");
 		list.add("James");
@@ -21,7 +21,7 @@ public class CollectionDemo
 			size++;
 		}
 		System.out.println(size);
-		Object[] names = new String[size];
+		String[] names = new String[size];
 		list.resetNext();
 		for(int i = 0; i < size; i++)
 		{	names[i] = list.getNext();

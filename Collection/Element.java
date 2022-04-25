@@ -5,17 +5,18 @@
  * it's good for testing and practice
  * 
  * Wrapper classes: Integer, Character, Double, etc.
+ * Tutorial about generics: https://youtu.be/K1iu1kXkVoA
  */
 
 
-public class Element
+public class Element <T> // <T> = generics;
 {
-	private Object data; // can also be a number, String, array, etc.
+	private T data; // can also be a number, String, array, etc.
 	private Element next;// for numbers use the wrapper classes
 	
 	public Element() { }
 	
-	public Element(Object data)
+	public Element(T data)
 	{	this.data = data;
 		this.next = null;
 	}
@@ -28,7 +29,7 @@ public class Element
 	{	return this.next;
 	}
 	
-	public Object getData()
+	public T getData()
 	{	return this.data;
 	}
 	
@@ -36,7 +37,7 @@ public class Element
 	{	this.next = e;
 	}
 	
-	public void setData(Object data)
+	public void setData(T data)
 	{	this.data = data;
 	}
 	

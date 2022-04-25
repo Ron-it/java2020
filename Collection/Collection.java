@@ -10,10 +10,10 @@
  * 
  */
  
-public class Collection
+public class Collection <T>
 {
-	Element start;
-	Element current;
+	Element <T> start;
+	Element <T> current;
 	// an Element end; could be added to keep track of the last item
 	
 	public Collection()
@@ -29,7 +29,7 @@ public class Collection
 	{	return current != null;
 	}
 
-	public void add(Object data)
+	public <T> void add(T data)
 	// can also be a number, object, array, etc. instead of String
 	{
 		Element newElement = new Element(data);
@@ -42,14 +42,14 @@ public class Collection
 		}
 	}
 	
-	public Object getNext()
+	public T getNext()
 	{
-		Object data = current.getData();
+		T data = current.getData();
 		current = current.getNext();
 		return data;
 	}
 	
-	public Object getData()
+	public T getData()
 	{
 		return this.getNext();
 	}
